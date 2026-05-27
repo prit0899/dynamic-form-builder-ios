@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84D031892FC71C5300375725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D031852FC71C5300375725 /* Assets.xcassets */; };
+		84D0318A2FC71C5300375725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031862FC71C5300375725 /* ContentView.swift */; };
+		84D0318B2FC71C5300375725 /* DynamicFormBuilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031872FC71C5300375725 /* DynamicFormBuilderApp.swift */; };
+		84D031932FC71D4100375725 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031922FC71D3E00375725 /* Theme.swift */; };
+		84D031952FC7214E00375725 /* UI.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D031942FC7214300375725 /* UI.json */; };
+		84D031972FC724D200375725 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031962FC724CD00375725 /* ViewType.swift */; };
+		84D031992FC7400000375725 /* DynamicFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031982FC7400000375725 /* DynamicFormViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84D031772FC71C4700375725 /* DynamicFormBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicFormBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D031852FC71C5300375725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84D031862FC71C5300375725 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84D031872FC71C5300375725 /* DynamicFormBuilderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormBuilderApp.swift; sourceTree = "<group>"; };
+		84D031922FC71D3E00375725 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		84D031942FC7214300375725 /* UI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UI.json; sourceTree = "<group>"; };
+		84D031962FC724CD00375725 /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
+		84D031982FC7400000375725 /* DynamicFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D031742FC71C4700375725 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84D0316E2FC71C4700375725 = {
+			isa = PBXGroup;
+			children = (
+				84D031882FC71C5300375725 /* DynamicFormBuilder */,
+				84D031782FC71C4700375725 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84D031782FC71C4700375725 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84D031772FC71C4700375725 /* DynamicFormBuilder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84D031882FC71C5300375725 /* DynamicFormBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				84D0318C2FC71CE200375725 /* MVVM */,
+				84D0318D2FC71CEF00375725 /* Resources */,
+				84D0318E2FC71CF900375725 /* App */,
+			);
+			path = DynamicFormBuilder;
+			sourceTree = "<group>";
+		};
+		84D0318C2FC71CE200375725 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				84D031912FC71D1D00375725 /* ViewModel */,
+				84D031902FC71D1600375725 /* View */,
+				84D0318F2FC71D1000375725 /* Model */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		84D0318D2FC71CEF00375725 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84D031942FC7214300375725 /* UI.json */,
+				84D031852FC71C5300375725 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84D0318E2FC71CF900375725 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				84D031872FC71C5300375725 /* DynamicFormBuilderApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		84D0318F2FC71D1000375725 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D031922FC71D3E00375725 /* Theme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84D031902FC71D1600375725 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84D031862FC71C5300375725 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84D031912FC71D1D00375725 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84D031982FC7400000375725 /* DynamicFormViewModel.swift */,
+				84D031962FC724CD00375725 /* ViewType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84D031762FC71C4700375725 /* DynamicFormBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D031822FC71C4900375725 /* Build configuration list for PBXNativeTarget "DynamicFormBuilder" */;
+			buildPhases = (
+				84D031732FC71C4700375725 /* Sources */,
+				84D031742FC71C4700375725 /* Frameworks */,
+				84D031752FC71C4700375725 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicFormBuilder;
+			packageProductDependencies = (
+			);
+			productName = DynamicFormBuilderApp;
+			productReference = 84D031772FC71C4700375725 /* DynamicFormBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84D0316F2FC71C4700375725 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					84D031762FC71C4700375725 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 84D031722FC71C4700375725 /* Build configuration list for PBXProject "DynamicFormBuilder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84D0316E2FC71C4700375725;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 84D031782FC71C4700375725 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D031762FC71C4700375725 /* DynamicFormBuilder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84D031752FC71C4700375725 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D031892FC71C5300375725 /* Assets.xcassets in Resources */,
+				84D031952FC7214E00375725 /* UI.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84D031732FC71C4700375725 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D031932FC71D4100375725 /* Theme.swift in Sources */,
+				84D0318A2FC71C5300375725 /* ContentView.swift in Sources */,
+				84D031992FC7400000375725 /* DynamicFormViewModel.swift in Sources */,
+				84D031972FC724D200375725 /* ViewType.swift in Sources */,
+				84D0318B2FC71C5300375725 /* DynamicFormBuilderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84D031802FC71C4900375725 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84D031812FC71C4900375725 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84D031832FC71C4900375725 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2TGK74XHC6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.DynamicFormBuilderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84D031842FC71C4900375725 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2TGK74XHC6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.DynamicFormBuilderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D031722FC71C4700375725 /* Build configuration list for PBXProject "DynamicFormBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D031802FC71C4900375725 /* Debug */,
+				84D031812FC71C4900375725 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D031822FC71C4900375725 /* Build configuration list for PBXNativeTarget "DynamicFormBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D031832FC71C4900375725 /* Debug */,
+				84D031842FC71C4900375725 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84D0316F2FC71C4700375725 /* Project object */;
+}
