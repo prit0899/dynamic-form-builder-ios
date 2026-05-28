@@ -104,11 +104,19 @@ final class DynamicFormViewModel: ObservableObject {
     }
 
     func validationMessage(for field: Field) -> String? {
-        guard submitted, isMissingRequiredValue(for: field) else {
+        guard submitted else {
             return nil
         }
 
-        return field.error_message ?? "This field is required."
+        if isMissingRequiredValue(for: field) {
+            return field.error_message ?? "This field is required."
+        }
+
+        if hasInvalidFormat(for: field) {
+            return invalidFormatMessage(for: field)
+        }
+
+        return nil
     }
 
     func isMissingRequiredValue(for field: Field) -> Bool {
@@ -120,12 +128,59 @@ final class DynamicFormViewModel: ObservableObject {
         case .text:
             return textValues[field.id, default: ""].trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         case .dropdown:
-            return field.options.isEmpty || selectedOptions[field.id, default: []].isEmpty
+            // When the JSON marks a dropdown as required but ships no options,
+            // the schema contradicts itself: the user cannot select a value
+            // that does not exist. Honour the data (no options) over the
+            // schema (required) so the form is not deadlocked, and let the
+            // server enforce business rules over the empty submitted value.
+            guard !field.options.isEmpty else {
+                return false
+            }
+            return selectedOptions[field.id, default: []].isEmpty
         case .checkbox:
             return checkboxValues[field.id, default: false] == false
         case .toggle, .colorPicker, .unknown:
             return false
         }
+    }
+
+    func hasInvalidFormat(for field: Field) -> Bool {
+        guard field.type == .text, field.subtype == .uri else {
+            return false
+        }
+
+        let value = textValues[field.id, default: ""].trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // Empty values are handled by the required check; an empty optional
+        // URI field is fine.
+        guard !value.isEmpty else {
+            return false
+        }
+
+        return !isValidURL(value)
+    }
+
+    func invalidFormatMessage(for field: Field) -> String {
+        switch field.subtype {
+        case .uri:
+            return "Enter a valid URL (e.g. https://example.com)."
+        default:
+            return "Invalid value."
+        }
+    }
+
+    private func isValidURL(_ string: String) -> Bool {
+        guard let url = URL(string: string),
+              let scheme = url.scheme?.lowercased(),
+              ["http", "https"].contains(scheme),
+              let host = url.host, !host.isEmpty,
+              // Require at least one dot in the host so single-label inputs
+              // like "https://abc" do not pass.
+              host.contains(".") else {
+            return false
+        }
+
+        return true
     }
 
     func selectedOptionLabel(for field: Field) -> String? {
@@ -139,15 +194,36 @@ final class DynamicFormViewModel: ObservableObject {
     func submit(_ elements: UIElements) {
         withAnimation(.easeInOut(duration: 0.2)) {
             submitted = true
-            didSubmitSuccessfully = elements.renderableFields.allSatisfy { !isMissingRequiredValue(for: $0) }
+            didSubmitSuccessfully = elements.renderableFields.allSatisfy {
+                !isMissingRequiredValue(for: $0) && !hasInvalidFormat(for: $0)
+            }
         }
 
         guard didSubmitSuccessfully else {
+            triggerHaptic(.error)
             return
         }
 
+        triggerHaptic(.success)
         printFinalPayload(for: elements)
         showConfirmation = true
+    }
+
+    private func triggerHaptic(_ type: HapticType) {
+        #if canImport(UIKit)
+        let generator = UINotificationFeedbackGenerator()
+        switch type {
+        case .success:
+            generator.notificationOccurred(.success)
+        case .error:
+            generator.notificationOccurred(.error)
+        }
+        #endif
+    }
+
+    private enum HapticType {
+        case success
+        case error
     }
 
     func fieldAccentColor(_ elements: UIElements) -> Color {

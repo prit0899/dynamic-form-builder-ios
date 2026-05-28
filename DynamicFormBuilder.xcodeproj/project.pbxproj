@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84732CFE2FC82AAE00DE6D24 /* DynamicFormBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84732CFC2FC82AAE00DE6D24 /* DynamicFormBuilderTests.swift */; };
 		84D031892FC71C5300375725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D031852FC71C5300375725 /* Assets.xcassets */; };
 		84D0318A2FC71C5300375725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031862FC71C5300375725 /* ContentView.swift */; };
 		84D0318B2FC71C5300375725 /* DynamicFormBuilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031872FC71C5300375725 /* DynamicFormBuilderApp.swift */; };
@@ -16,7 +17,19 @@
 		84D031992FC7400000375725 /* DynamicFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D031982FC7400000375725 /* DynamicFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84732CF72FC82AA900DE6D24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D0316F2FC71C4700375725 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D031762FC71C4700375725;
+			remoteInfo = DynamicFormBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		84732CF32FC82AA900DE6D24 /* DynamicFormBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicFormBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84732CFC2FC82AAE00DE6D24 /* DynamicFormBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormBuilderTests.swift; sourceTree = "<group>"; };
 		84D031772FC71C4700375725 /* DynamicFormBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicFormBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D031852FC71C5300375725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D031862FC71C5300375725 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84732CF02FC82AA900DE6D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D031742FC71C4700375725 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +58,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84732CFD2FC82AAE00DE6D24 /* DynamicFormBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				84732CFC2FC82AAE00DE6D24 /* DynamicFormBuilderTests.swift */,
+			);
+			path = DynamicFormBuilderTests;
+			sourceTree = "<group>";
+		};
 		84D0316E2FC71C4700375725 = {
 			isa = PBXGroup;
 			children = (
 				84D031882FC71C5300375725 /* DynamicFormBuilder */,
+				84732CFD2FC82AAE00DE6D24 /* DynamicFormBuilderTests */,
 				84D031782FC71C4700375725 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				84D031772FC71C4700375725 /* DynamicFormBuilder.app */,
+				84732CF32FC82AA900DE6D24 /* DynamicFormBuilderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +149,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		84732CF22FC82AA900DE6D24 /* DynamicFormBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84732CFB2FC82AA900DE6D24 /* Build configuration list for PBXNativeTarget "DynamicFormBuilderTests" */;
+			buildPhases = (
+				84732CEF2FC82AA900DE6D24 /* Sources */,
+				84732CF02FC82AA900DE6D24 /* Frameworks */,
+				84732CF12FC82AA900DE6D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84732CF82FC82AA900DE6D24 /* PBXTargetDependency */,
+			);
+			name = DynamicFormBuilderTests;
+			packageProductDependencies = (
+			);
+			productName = DynamicFormBuilderTests;
+			productReference = 84732CF32FC82AA900DE6D24 /* DynamicFormBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		84D031762FC71C4700375725 /* DynamicFormBuilder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84D031822FC71C4900375725 /* Build configuration list for PBXNativeTarget "DynamicFormBuilder" */;
@@ -148,6 +198,10 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					84732CF22FC82AA900DE6D24 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 84D031762FC71C4700375725;
+					};
 					84D031762FC71C4700375725 = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -168,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				84D031762FC71C4700375725 /* DynamicFormBuilder */,
+				84732CF22FC82AA900DE6D24 /* DynamicFormBuilderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84732CF12FC82AA900DE6D24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D031752FC71C4700375725 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +247,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84732CEF2FC82AA900DE6D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84732CFE2FC82AAE00DE6D24 /* DynamicFormBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D031732FC71C4700375725 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,7 +269,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		84732CF82FC82AA900DE6D24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D031762FC71C4700375725 /* DynamicFormBuilder */;
+			targetProxy = 84732CF72FC82AA900DE6D24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		84732CF92FC82AA900DE6D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.DynamicFormBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicFormBuilder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicFormBuilder";
+			};
+			name = Debug;
+		};
+		84732CFA2FC82AA900DE6D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.DynamicFormBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicFormBuilder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicFormBuilder";
+			};
+			name = Release;
+		};
 		84D031802FC71C4900375725 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,6 +508,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84732CFB2FC82AA900DE6D24 /* Build configuration list for PBXNativeTarget "DynamicFormBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84732CF92FC82AA900DE6D24 /* Debug */,
+				84732CFA2FC82AA900DE6D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84D031722FC71C4700375725 /* Build configuration list for PBXProject "DynamicFormBuilder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

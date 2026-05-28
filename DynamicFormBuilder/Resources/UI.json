@@ -76,7 +76,7 @@
             "type": "DROPDOWN",
             "label": "Billing Account",
             "required": true,
-            "options": [{"id" : "My_Old","label" : "abc"}]
+            "options": []
         },
         {
             "id": "admin_password",
