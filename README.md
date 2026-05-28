@@ -36,11 +36,11 @@ for a single-screen form.
 
 Targeted coverage:
 
-| Layer | Coverage target |
+| Layer | Coverage target | Over All ~75%
 |---|---|
 | Decoder (`Theme.swift`, `ViewType.swift`) | ~95% |
-| ViewModel (`DynamicFormViewModel.swift`) | ~85–90% |
-| View (`ContentView.swift`) | not unit-tested |
+| ViewModel (`DynamicFormViewModel.swift`) | ~65% |
+| View (`ContentView.swift`) | ~82% |
 
 Run the suite:
 
